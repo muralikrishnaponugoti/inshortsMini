@@ -8,7 +8,7 @@ fetch("../api/news")
             const newsItem=document.createElement('div');
             newsItem.classList.add("newsCard");
             newsItem.id=index;
-            const content=article.content.slice(0,-13);
+            const content=article.content ? article.content.slice(0, -13) : "No content available";
             newsItem.innerHTML=`
             <div>
                 <img src=${article.urlToImage} alt="img"/> 
