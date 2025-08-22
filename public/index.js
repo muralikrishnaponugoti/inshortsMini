@@ -1,7 +1,8 @@
 
-fetch('https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=5dc97cf8cdeb49d0b1152a08c8558652')
+fetch("../api/news")
     .then(response=>response.json())
     .then(data=>{
+        console.log(data);
         const newsContainer=document.getElementById('newsList');
         data.articles.forEach((article,index)=>{
             const newsItem=document.createElement('div');
