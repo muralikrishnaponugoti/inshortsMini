@@ -19,6 +19,7 @@ fetch("../api/news")
             </div>
             `;
             newsContainer.appendChild(newsItem);
+            console.log(article);
         })
 
         const card=document.querySelectorAll(".newsCard");
