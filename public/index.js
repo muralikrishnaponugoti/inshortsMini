@@ -3,7 +3,6 @@ fetch("../api/news")
     .then(response=>response.json())
     .then(data=>{
         const newsContainer=document.getElementById('newsList');
-        console.log(data.articles);
         data.articles.forEach((article,index)=>{
             const newsItem=document.createElement('div');
             newsItem.classList.add("newsCard");
@@ -19,7 +18,6 @@ fetch("../api/news")
             </div>
             `;
             newsContainer.appendChild(newsItem);
-            console.log(article);
         })
 
         const card=document.querySelectorAll(".newsCard");
