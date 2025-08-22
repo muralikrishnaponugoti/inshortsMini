@@ -2,8 +2,8 @@
 fetch("../api/news")
     .then(response=>response.json())
     .then(data=>{
-        console.log(data);
         const newsContainer=document.getElementById('newsList');
+        console.log(data.articles);
         data.articles.forEach((article,index)=>{
             const newsItem=document.createElement('div');
             newsItem.classList.add("newsCard");
